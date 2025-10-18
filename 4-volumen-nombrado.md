@@ -45,7 +45,7 @@ docker network create net-drupal
 ```
 ### Crear un servidor postgres vinculado a la red net-drupal, completar la ruta del contenedor
 ```
-docker run -d --name server-postgres -e POSTGRES_DB=db_drupal -e POSTGRES_PASSWORD=12345 -e POSTGRES_USER=user_drupal --network net-drupal postgres
+docker run -d --name server-postgres -e POSTGRES_DB=db_drupal -e POSTGRES_PASSWORD=12345 -e POSTGRES_USER=user_drupal -v vol-postgres:/var/lib/postgresql/data --network net-drupal postgres
 ```
 _No es necesario exponer el puerto, debido a que nos vamos a conectar desde la misma red de docker_
 
@@ -77,6 +77,7 @@ docker run -d --name server-drupal --publish published=9700,target=80 -v vol-mod
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
 
 # COMPLETAR CON EL DIAGRAMA SOLICITADO
+<img width="752" height="421" alt="XD" src="https://github.com/user-attachments/assets/1b1d7677-dbe2-454c-88a1-f41e6077ac0b" />
 
 ### Eliminar un volumen específico
 ```
