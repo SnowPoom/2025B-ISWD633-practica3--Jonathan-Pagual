@@ -32,5 +32,4 @@ Se muestra el template que se descargó en la página.
 docker rm -f nginx-vol
 ```
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
 Se vuelve a cargar el html que se descargó antes, parece ser que persiste los de la carpeta host aunque el contenedor sea eliminado.
