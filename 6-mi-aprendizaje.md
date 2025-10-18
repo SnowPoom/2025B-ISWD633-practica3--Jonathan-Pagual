@@ -1,1 +1,2 @@
 Los principales logros en esta practica fue la persistencia de datos, ya que cuando se eliminaba el contenedor tocaba volver a configurar o los datos no seguian ahí, con los volúmenes podemos realizar esta persistencia.Se puede colocar rutas personalizadas dentro del host o unicamente colocar un nombre a un volúmen y que docker lo maneje. Con el ejercicio se encontró que algunas imagenes ocupan volumenes para su funcionamiento como la imagen drupal (4 volúmenes). 
+Tenemos igualmente tipos de volúmenes como Anónimos o Nombrados, los cuales nos sirven para diferentes entornos.
