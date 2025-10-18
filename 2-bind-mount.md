@@ -16,22 +16,21 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 
 ### Crear un contenedor con la imagen nginx:alpine, mapear todos por puertos, para la ruta carpeta host colocar el directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html (esta ruta se obtiene al revisar la documentación de la imagen)
 ![Volúmenes](volumen-host.PNG)
-# COMPLETAR CON EL COMANDO
+```
+docker run --name nginx-vol -d -v "C:\Users\SnowPoom\Documents\Sexto\constr\nginx\html":/usr/share/nginx/html -P nginx:alpine
+```
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+Se puede visualizar un error 403 forbidden al ingresr al servidor nginx
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+Parece que el archivo index que normalmente suele estar en el contenedor ahora no lo está y el directorio /usr/share/nginx/html esta vacío.
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+Se muestra el template que se descargó en la página.
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
-
+```
+docker rm -f nginx-vol
+```
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
-
+Se vuelve a cargar el html que se descargó antes, parece ser que persiste los de la carpeta host aunque el contenedor sea eliminado.
